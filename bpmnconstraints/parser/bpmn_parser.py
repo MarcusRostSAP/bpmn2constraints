@@ -65,11 +65,12 @@ class Parser:
             logging.warning(
                 "\nCould not execute model. Make sure that model is:\n1. Formatted correctly.\n2. File ends with .xml or .json."
             )
-    
+            
     def validate_splitting_and_joining_gateway_cases(self):
         """Update 'is start' and 'is end' attributes of cfo based on splitting/joining gateways. 
         Otherwise, the parser interprets the gateways as start/end events instead of the activities.
         """
+
         item_indices = {item["name"]: index for index, item in enumerate(self.sequence)}
         for cfo in self.sequence:
             if cfo["is start"] and cfo["name"] == "XOR":
