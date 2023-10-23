@@ -24,7 +24,7 @@ MULTIPLE_STARTS_DIAGRAM = {
 
 MULTIPLE_ENDINGS_DIAGRAM = {
     "path": "examples/misc/multiple_endings.json",
-    "xmlpath": "examples/misc/multiple_starts.xml",
+    "xmlpath": "examples/misc/multiple_endings.xml",
     "ending elements": [
         "sid-F54D1372-E982-4B0F-9543-F3CC3C6F595F",
         "sid-42CD2A75-895E-4E2C-9340-6CE7C5570EFF",

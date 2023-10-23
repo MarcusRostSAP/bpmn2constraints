@@ -3,9 +3,9 @@ from pytest import raises
 from file_constants import (
     LINEAR_SEQUENCE_DIAGRAM_WITH_START_AND_END,
     REQUIREMENTS_TXT,
+    XOR_GATEWAY_SEQUENCE_DIAGRAM,
 )
 from test_utils import init_test_setup_for_compiler
-
 
 def test_xml_file_is_identified():
     try:

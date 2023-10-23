@@ -25,8 +25,8 @@ def init_test_setup_for_compiler(diagram_constant, test_xml = False):
         return constraints
 
 
-def init_test_setup_for_mermaid(diagram_constant):
-    path = Path(diagram_constant.get("path"))
+def init_test_setup_for_mermaid(diagram_constant, test_xml = False):
+    path = Path(diagram_constant["xmlpath" if test_xml else "path"])
     setup = Setup(None)
     if setup.is_file(path):
         bpmn = Parser(path, True, False).run()
