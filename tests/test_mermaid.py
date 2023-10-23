@@ -10,3 +10,11 @@ def test_linear_mermaid_graph():
 def test_gateway_mermaid_graph():
     res = init_test_setup_for_mermaid(GATEWAY_MERMAID_GRAPH)
     assert GATEWAY_MERMAID_GRAPH.get("output") == res
+
+def test_linear_mermaid_graph_xml():
+    res = init_test_setup_for_mermaid(LINEAR_MERMAID_GRAPH, True)
+    assert LINEAR_MERMAID_GRAPH.get("output") == res
+
+def test_gateway_mermaid_graph_xml():
+    res = init_test_setup_for_mermaid(GATEWAY_MERMAID_GRAPH, True)
+    assert GATEWAY_MERMAID_GRAPH.get("output") == res

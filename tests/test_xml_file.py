@@ -19,7 +19,7 @@ def test_xml_file_is_identified():
 
 def test_unsupported_file_extension_is_rejected():
     with raises(Exception):
-        xml = init_test_setup_for_compiler(REQUIREMENTS_TXT)
+        xml = init_test_setup_for_compiler(REQUIREMENTS_TXT, False)
 
 
 def test_that_xml_and_json_parsing_generates_same_output():
