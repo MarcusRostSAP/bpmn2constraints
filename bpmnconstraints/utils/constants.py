@@ -9,6 +9,11 @@ ALLOWED_GATEWAYS = [
     "exclusivegateway",
 ]
 
+DISCARDED_START_GATEWAYS = [
+    "exclusive_databased_gateway",
+    "exclusivegateway"
+]
+
 ALLOWED_ACTIVITIES = [
     "task",
     "event",

@@ -1,0 +1,14 @@
+flowchart LR
+0:exclusive_databased_gateway:{XOR}-->1:task:(activity two)
+0:exclusive_databased_gateway:{XOR}-->2:task:(activity one)
+3:exclusive_databased_gateway:{XOR}-->4:task:(activity three)
+5:exclusive_databased_gateway:{XOR}-->6:task:(activity four)
+5:exclusive_databased_gateway:{XOR}-->7:task:(activity five)
+8:exclusive_databased_gateway:{XOR}-->9:endnoneevent:((endnoneevent))
+0:exclusive_databased_gateway:-->2:task:
+2:task:-->3:exclusive_databased_gateway:
+0:exclusive_databased_gateway:-->1:task:
+1:task:-->3:exclusive_databased_gateway:
+4:task:-->5:exclusive_databased_gateway:
+6:task:-->8:exclusive_databased_gateway:
+7:task:-->8:exclusive_databased_gateway:
