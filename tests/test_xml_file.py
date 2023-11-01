@@ -4,7 +4,6 @@ from collections import Counter
 from file_constants import (
     LINEAR_SEQUENCE_DIAGRAM_WITH_START_AND_END,
     REQUIREMENTS_TXT,
-    XOR_GATEWAY_SEQUENCE_DIAGRAM,
 )
 from test_utils import init_test_setup_for_compiler, init_test_setup_for_parser
 
@@ -45,15 +44,3 @@ def test_that_xml_and_json_compiling_generates_same_output():
     xml = init_test_setup_for_compiler(LINEAR_SEQUENCE_DIAGRAM_WITH_START_AND_END, test_xml=True)
 
     assert sorted(json) == sorted(xml)
-
-def test_for_test():
-    json = init_test_setup_for_parser(XOR_GATEWAY_SEQUENCE_DIAGRAM)
-    xml = init_test_setup_for_parser(XOR_GATEWAY_SEQUENCE_DIAGRAM, True)
-    print("hej")
-    assert json == xml
-
-def test_for_test2():
-    json = init_test_setup_for_compiler(XOR_GATEWAY_SEQUENCE_DIAGRAM)
-    xml = init_test_setup_for_compiler(XOR_GATEWAY_SEQUENCE_DIAGRAM, True)
-
-    assert json == xml
