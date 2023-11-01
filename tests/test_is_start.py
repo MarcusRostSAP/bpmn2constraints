@@ -35,6 +35,7 @@ def test_all_start_elements_are_marked_as_starts_if_multiple_starts():
             start_count += 1
     assert start_count == len(MULTIPLE_STARTS_DIAGRAM.get("start elements"))
 
+
 def test_element_is_marked_as_start_if_it_has_no_predecessors_xml():
     res = init_test_setup_for_parser(LINEAR_SEQUENCE_DIAGRAM_WITHOUT_START_AND_END, True)
     for elem in res:

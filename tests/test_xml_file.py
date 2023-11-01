@@ -1,6 +1,5 @@
 from json import JSONDecodeError
 from pytest import raises
-from collections import Counter
 from file_constants import (
     LINEAR_SEQUENCE_DIAGRAM_WITH_START_AND_END,
     REQUIREMENTS_TXT,
@@ -38,6 +37,7 @@ def test_that_xml_and_json_parsing_generates_same_output():
     xml_data = init_test_setup_for_parser(LINEAR_SEQUENCE_DIAGRAM_WITH_START_AND_END, test_xml=True)
     
     assert are_dicts_equal(json_data, xml_data, 'name')
+
 
 def test_that_xml_and_json_compiling_generates_same_output():
     json = init_test_setup_for_compiler(LINEAR_SEQUENCE_DIAGRAM_WITH_START_AND_END)

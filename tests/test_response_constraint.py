@@ -23,6 +23,7 @@ def test_response_constraint_is_generated_for_element_between_two_gateway_constr
     ]
     assert all(constraint in res for constraint in expected_response_constraints)
 
+
 def test_response_constraint_is_generated_for_joining_gateway_xml():
     res = init_test_setup_for_compiler(XOR_GATEWAY_DIAGRAM, True)
     expected_response_constraints = [
@@ -32,6 +33,7 @@ def test_response_constraint_is_generated_for_joining_gateway_xml():
         "Alternate Response[forth activity lower, last activity]",
     ]
     assert all(constraint in res for constraint in expected_response_constraints)
+
 
 def test_response_constraint_is_generated_for_element_between_two_gateway_constructs_xml():
     res = init_test_setup_for_compiler(XOR_GATEWAY_SEQUENCE_DIAGRAM, True)

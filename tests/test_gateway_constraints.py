@@ -11,6 +11,7 @@ def test_that_all_gateway_constraints_are_generated():
     # assert res == expected_gateway_constraints
     assert all(constraint in res for constraint in expected_gateway_constraints)
 
+
 def test_that_all_gateway_constraints_are_generated_XML():
     res = init_test_setup_for_compiler(THREE_SPLIT_XOR_GATEWAY_DIAGRAM, True)
     expected_gateway_constraints = [

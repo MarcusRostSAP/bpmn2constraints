@@ -25,6 +25,7 @@ def test_gateway_splitting_to_three_paths():
                 THREE_SPLIT_XOR_GATEWAY_DIAGRAM.get("successors")
             )
 
+
 def test_element_is_marked_as_splitting_gateway_if_it_is_splitting_xml():
     res = init_test_setup_for_parser(SINGLE_XOR_GATEWAY_DIAGRAM, True)
     for elem in res:
