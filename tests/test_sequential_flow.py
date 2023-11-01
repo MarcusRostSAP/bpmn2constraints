@@ -61,6 +61,7 @@ def test_no_co_existence_between_element_and_gateway_element():
     assert "Co-Existence[zero Activity, first Activity]" not in res
     assert "Co-Existence[first Activity, zero Activity]" not in res
 
+
 def test_choice_constraints_generated_for_sequential_flow_xml():
     res = init_test_setup_for_compiler(LINEAR_SEQUENCE_DIAGRAM_WITH_START_AND_END, True)
     expected_choice_constraints = [

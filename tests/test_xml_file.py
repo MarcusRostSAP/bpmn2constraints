@@ -6,6 +6,7 @@ from file_constants import (
 )
 from test_utils import init_test_setup_for_compiler, init_test_setup_for_parser
 
+
 def test_xml_file_is_identified():
     try:
         xml = init_test_setup_for_compiler(
@@ -38,7 +39,7 @@ def test_that_xml_and_json_parsing_generates_same_output():
         LINEAR_SEQUENCE_DIAGRAM_WITH_START_AND_END, test_xml=True
     )
     
-    assert are_dicts_equal(json_data, xml_data, 'name')
+    assert are_dicts_equal(json_data, xml_data, "name")
 
 
 def test_that_xml_and_json_compiling_generates_same_output():

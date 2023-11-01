@@ -37,8 +37,7 @@ def test_end_constraint_is_generated_when_xor_gateway():
 
 
 def test_end_constraint_is_generated_when_multiple_endings_XML():
-    
-    res = init_test_setup_for_compiler(MULTIPLE_ENDINGS_DIAGRAM, test_xml=True) 
+    res = init_test_setup_for_compiler(MULTIPLE_ENDINGS_DIAGRAM, test_xml=True)
     expected_ending_constraints = [
         "End[ending one]",
         "End[ending two]",
