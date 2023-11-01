@@ -32,7 +32,9 @@ def test_missing_init_constraints_for_XOR_gate():
 
 
 def test_init_constraint_is_generated_without_explicit_start_event_xml():
-    res = init_test_setup_for_compiler(LINEAR_SEQUENCE_DIAGRAM_WITHOUT_START_AND_END, True)
+    res = init_test_setup_for_compiler(
+        LINEAR_SEQUENCE_DIAGRAM_WITHOUT_START_AND_END, True
+    )
     assert "Init[first element]" in res
 
 

@@ -77,7 +77,9 @@ class Parser:
                 cfo["is start"] = False
                 for successor in cfo["successor"]:
                     self.sequence[item_indices[successor["name"]]]["is start"] = True
-            if cfo["is end"] and (cfo["name"] in GATEWAY_NAMES or cfo["type"] == "exclusivegateway"):
+            if cfo["is end"] and (
+                cfo["name"] in GATEWAY_NAMES or cfo["type"] == "exclusivegateway"
+            ):
                 cfo["is end"] = False
                 for predecessor in cfo["predecessor"]:
                     self.sequence[item_indices[predecessor["name"]]]["is end"] = True
