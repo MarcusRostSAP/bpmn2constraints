@@ -72,7 +72,6 @@ class Parser:
         """
 
         item_indices = {item["name"]: index for index, item in enumerate(self.sequence)}
-        print("hej")
         for cfo in self.sequence:
             if cfo["is start"] and (cfo["type"] in DISCARDED_START_GATEWAYS):
                 cfo["is start"] = False
