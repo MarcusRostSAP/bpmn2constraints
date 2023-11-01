@@ -56,8 +56,8 @@ def test_end_constraint_is_generated_without_explicit_end_event_XML():
         LINEAR_SEQUENCE_DIAGRAM_WITHOUT_START_AND_END, test_xml=True
     )
     assert "End[second element]" in res
-    
-    
+
+
 def test_end_constraint_is_generated_when_xor_gateway_XML():
     res = init_test_setup_for_compiler(XOR_GATEWAY_SEQUENCE_DIAGRAM, test_xml=True)
     expected_ending_constraints = [
